@@ -5,7 +5,7 @@ module SquarespaceApi
       allowed_actions :create, :all, :create, :delete, :update, :find_by_ids
 
       def find(id)
-        products = where(id: id)
+        products = find_by_ids([id])
         products ? products.first : nil
       end
 
